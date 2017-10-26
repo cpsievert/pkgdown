@@ -58,6 +58,11 @@ replay_html.list <- function(x, ...) {
 }
 
 #' @export
+replay_html.html <- function(x, ...) {
+  str_c("<div class='output'>", str_c(x, collapse = ""), "</div>")
+}
+
+#' @export
 replay_html.NULL <- function(x, ...) ""
 
 #' @export
